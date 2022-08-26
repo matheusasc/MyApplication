@@ -26,6 +26,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="169dp"
+        android:layout_height="139dp"
+        android:progressTint="#C51E1E"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="1dp"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="matrix"
+        android:visibility="visible"
+        app:srcCompat="@drawable/alien"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:visibility="visible" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
