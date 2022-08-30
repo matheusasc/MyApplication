@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,17 +16,22 @@ import android.widget.Toast;
 
 import com.example.myapplication.activities.ActivityProduto;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     int progressStatus = 0;
     private Button button;
     private ProgressBar progressBar;
+    RecyclerView recyclerView;
+    ArrayList<Episodio> episodios;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        recyclerView = findViewById(R.id.minharecview);
         button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +56,10 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        Episodio episodio = new Episodio("","","","");
+        episodios = new ArrayList<Episodio>();
+        episodios.add(episodio);
 
     }
 
